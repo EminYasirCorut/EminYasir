@@ -20,7 +20,6 @@ async function getData(){
 }
 
 getData();
-console.log(images.forEach(x => x))
 
 var i = 1;
 var y = 0;
