@@ -12,7 +12,7 @@ images.length = 10;
 
 
 async function getData(){
-    for(var i = 1 ; i < images.length ; i++){
+    for(var i = 0 ; i < images.length ; i++){
         images[i] = new Image();
         //images[i].src = 'Walk (' + i.toString() + ').png';
     
