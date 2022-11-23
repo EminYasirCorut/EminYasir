@@ -10,7 +10,7 @@ images.length = 10;
 async function getData(){
     for(var i = 0 ; i < images.length ; i++){
         images[i] = new Image();
-      await  fetch('https://github.com/EminYasirCorut/eyasircorut.github.io/ImgFile/'+'Attack_00' + i.toString() + '.png').then(res=>res.blob())
+      await  fetch('https://eminyasircorut.github.io/ImgFile/'+'Attack_00' + i.toString() + '.png').then(res=>res.blob())
                                                  .then(blob => {
                                                     let objectURL = URL.createObjectURL(blob);
                                                     images[i].src = objectURL;
