@@ -23,7 +23,6 @@ getData();
 
 
 var i = 1;
-var y = 0;
 var test;
 
 var kontrol=0;
@@ -36,11 +35,8 @@ btnPause.addEventListener("click", function(){
     else{
         test = setInterval(function(){
             i++;
-            y++;
             if( i >= 10){
                 i = 1;
-            }
-            if(y<10){
             }
             c.drawImage(images[i],275,275,275,275);
         },150)
@@ -72,12 +68,8 @@ btnStart.addEventListener("click", function(){
     i=1;
     test = setInterval(function(){
         i++;
-        y++;
         if( i >= 10){
             i = 1;
-        }
-        if(y<10){
-           // console.log(images[i]);
         }
         c.drawImage(images[i],275,275,275,275);
     },150)
