@@ -10,7 +10,7 @@ images.length = 10;
 async function getData(){
     for(var i = 1 ; i < images.length ; i++){
         images[i] = new Image();
-      await  fetch('https://mehmetak7.github.io/mehmetak.github.io/eycc/'+'Jump (' + i.toString() + ').png').then(res=>res.blob())
+      await  fetch('https://mehmetak7.github.io/mehmetak.github.io/crt12/'+'Walk (' + i.toString() + ').png').then(res=>res.blob())
                                                  .then(blob => {
                                                     let objectURL = URL.createObjectURL(blob);
                                                     images[i].src = objectURL;
@@ -21,8 +21,8 @@ async function getData(){
 
 getData();
 
-
 var i = 1;
+var y = 0;
 var test;
 
 var kontrol=0;
@@ -68,6 +68,7 @@ btnStart.addEventListener("click", function(){
     i=1;
     test = setInterval(function(){
         i++;
+        y++;
         if( i >= 10){
             i = 1;
         }
