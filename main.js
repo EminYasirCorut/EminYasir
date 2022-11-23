@@ -4,13 +4,19 @@ var c = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+//create empty array
 var images = [];
 images.length = 10;
 
+//push the images into array
+
+
 async function getData(){
-    for(var i = 0 ; i < images.length ; i++){
+    for(var i = 1 ; i < images.length ; i++){
         images[i] = new Image();
-      await  fetch('https://eminyasircorut.github.io/ImgFile/'+'Attack_00' + i.toString() + '.png').then(res=>res.blob())
+        //images[i].src = 'Walk (' + i.toString() + ').png';
+    
+      await  fetch('https://mehmetak7.github.io/mehmetak.github.io/HWimages/'+'Walk (' + i.toString() + ').png').then(res=>res.blob())
                                                  .then(blob => {
                                                     let objectURL = URL.createObjectURL(blob);
                                                     images[i].src = objectURL;
@@ -20,6 +26,7 @@ async function getData(){
 }
 
 getData();
+
 
 var i = 1;
 var y = 0;
@@ -80,5 +87,6 @@ btnStart.addEventListener("click", function(){
            // console.log(images[i]);
         }
         c.drawImage(images[i],275,275,275,275);
-    },150)
+    },150)
 });
+
