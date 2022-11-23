@@ -10,7 +10,7 @@ images.length = 10;
 async function getData(){
     for(var i = 1 ; i < images.length ; i++){
         images[i] = new Image();
-      await  fetch('https://mehmetak7.github.io/mehmetak.github.io/crt12/'+'Walk (' + i.toString() + ').png').then(res=>res.blob())
+      await  fetch('https://mehmetak7.github.io/mehmetak.github.io/eimages/'+'Walk (' + i.toString() + ').png').then(res=>res.blob())
                                                  .then(blob => {
                                                     let objectURL = URL.createObjectURL(blob);
                                                     images[i].src = objectURL;
