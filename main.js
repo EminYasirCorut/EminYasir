@@ -38,6 +38,7 @@ btnPause.addEventListener("click", function(){
             if( i >= 10){
                 i = 1;
             }
+            c.clearRect(275,275,275,275);
             c.drawImage(images[i],275,275,275,275);
         },150)
         kontrol=0;
@@ -53,6 +54,7 @@ btnNext.addEventListener("click", function(){
     if(i == 10){
         i =1;
     }
+    c.clearRect(275,275,275,275);
     c.drawImage(images[i],275,275,275,275);
 });
 
@@ -61,6 +63,7 @@ btnPrev.addEventListener("click", function(){
     if(i == 0){
         i = 10;
     }
+    c.clearRect(275,275,275,275);
     c.drawImage(images[i],275,275,275,275);
 });
 
@@ -72,6 +75,7 @@ btnStart.addEventListener("click", function(){
         if( i >= 10){
             i = 1;
         }
+        c.clearRect(275,275,275,275);
         c.drawImage(images[i],275,275,275,275);
     },150)
 });
