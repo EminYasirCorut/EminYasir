@@ -1,0 +1,69 @@
+<body data-new-gr-c-s-check-loaded="14.1040.0" data-gr-ext-installed="">
+  
+    <h2 id="title">GitHub Users Application</h2>
+    <input type="text" id="usr" value="EminYasirCorut" onchange="readUser()">
+    <p id="out" style="color:darkblue;">Reference-Error: cause is not defined</p>
+    
+    <hr>
+    <hr>
+  <b>Sample code</b>
+  <pre id="sample" aria-setsize="10px">async function toJSON(url) {<br>    try {<br>      let r = await fetch(url)<br>      if (!r.ok) throw cause(r.status)<br>      return r.json()<br>    } catch (e) {<br>      error(e)<br>    }<br>  } <br> async function readUser() {<br>    const URL = "https://api.github.com/users/"<br>      const BR = '&lt;BR&gt;'<br>      let u = await toJSON(URL+usr.value)<br>      if (!u || !u.login) return<br>      out.style.color = ''<br>      out.innerHTML = ''<br><br>      //avatar<br>      out.innerHTML = `&lt;img src="${u.avatar_url}"&gt;`<br>      //name<br>      let s = (u.name || u.login).bold()<br>      out.innerHTML += s+BR; console.log(s)<br>    //username<br>      let userName=u.login<br>      out.innerHTML += userName+BR; console.log(userName)<br>      out.innerHTML +="&lt;br&gt;"<br>      //company<br>      let company=u.company<br>      out.innerHTML += "Company : "+company+BR; console.log(company)<br>      //lLocation<br>      let j<br>      if (u.location) j = u.location<br><br>      out.innerHTML +="Location : "+j+BR; console.log(j)<br>      <br>      <br>      //link<br>      let h = "github.com/"+u.login<br>      out.innerHTML +="Link :"+ <br>      `&lt;a href="https://${h}" target=NewTab&gt;${h}&lt;/a&gt;`<br>   <br>  } <br> </pre>
+  <hr>
+    
+    
+    <script>
+    "use strict";
+    async function readUser() {
+        const URL = "https://api.github.com/users/"
+        const br = '<BR>'
+        let person = await toJSON(URL+usr.value)
+        if (!person || !person.login) return
+        out.style.color = ''
+        out.innerHTML = ''
+        //avatar
+        out.innerHTML = `<img src="${person.avatar_url}">`
+        //name
+        let s = (person.name || person.login).bold()
+        out.innerHTML += s+br; console.log(s)
+        //username
+        let userName=person.login
+        out.innerHTML += userName+br; console.log(userName)
+        out.innerHTML +="<br>"
+        //company
+        let company=person.company
+        out.innerHTML += "Company => "+company+br; console.log(company)
+        //lLocation
+        let j
+        if (person.location) j = person.location
+        out.innerHTML +="Location => "+j+br; console.log(j)
+        //link
+        let h = "github.com/"+person.login
+        out.innerHTML +="Link :"+ 
+        `<a href="https://${h}" target=NewTab>${h}</a>`
+     
+    }
+    function error(e) {
+        out.innerText = e
+        out.style.color = 'darkred'
+        console.error(e)
+    }
+    async function toJSON(url) {
+      try {
+        let r = await fetch(url)
+        if (!r.ok) {
+            throw cause(r.status)
+        }
+        return r.json()
+      } catch (e) {
+        error(e)
+      }
+    }
+        title.innerText = document.title
+        out.innerText = "Reading data"
+        readUser()
+        sample.innerText = toJSON+ ' \n ' +readUser + ' \n ' 
+    </script>
+  
+    
+    <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+  </body>
