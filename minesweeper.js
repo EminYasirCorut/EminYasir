@@ -1,8 +1,8 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext("2d");
 
-var row = 25;
-var column = 15;
+var row = 20;
+var column = 10;
 var mines = Math.floor(row * column / 10);
 var boxSize = 25;
 
