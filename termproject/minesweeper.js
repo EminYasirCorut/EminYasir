@@ -20,6 +20,7 @@ ctx.font = fontSize + "px Arial";
 
 var boxRow = [];
 
+
 for (i = 0; i < row; i++ ){
     var boxColumn = [];
     for (j = 0; j < column; j++){
