@@ -1,7 +1,7 @@
-const CACHE ='eyasircorut.github.io'
-const FILES = [ 'eyasircorut.github.io/termproject/','eyasircorut.github.io/termproject/TermProject.html'
-, 'eyasircorut.github.io/termproject/minesweeper.js',
- 'eyasircorut.github.io/termproject/sw.js', 'eyasircorut.github.io/termproject/manifest.json','eyasircorut.github.io/termproject/may.png']
+const CACHE ='termproject'
+const FILES = [ 'TermProject.html'
+, 'minesweeper.js',
+ 'sw.js','manifest.json','may.png']
 function installCB(e) {
   e.waitUntil(
     caches.open(CACHE)
