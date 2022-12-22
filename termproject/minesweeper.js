@@ -143,6 +143,8 @@ var check = function(i,j){
     }
 }
 
+navigator.serviceWorker.register('sw.js')
+
 document.onclick = function(mouse){
     if (!gameover){
     var mouseX = mouse.clientX - canvas.getBoundingClientRect().left;
