@@ -1,11 +1,11 @@
 {
     "name": "Mayın Tarlası",
-    "start_url": "/termproject/TermProject.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "green",
     "icons": [
       {
-        "src": "https://eminyasircorut.github.io/eyasircorut.github.io/termproject/may.png",
+        "src": "may.png",
         "sizes": "192x192",
         "type": "image/png"
   }

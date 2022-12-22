@@ -1,7 +1,5 @@
 const CACHE ='termproject'
-const FILES = [ 'TermProject.html'
-, 'minesweeper.js',
- 'sw.js','manifest.json','may.png']
+const FILES = ['index.html','minesweeper.js','sw.js','manifest.json','may.png']
 function installCB(e) {
   e.waitUntil(
     caches.open(CACHE)
