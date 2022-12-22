@@ -98,6 +98,8 @@ var drawBombs = function(){
     }
 }
 
+
+
 var gameover = false;
 var opened = row * column;
 var check = function(i,j){
@@ -143,7 +145,7 @@ var check = function(i,j){
     }
 }
 
-navigator.serviceWorker.register('sw.js')
+
 
 document.onclick = function(mouse){
     if (!gameover){
