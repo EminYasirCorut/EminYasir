@@ -1,10 +1,10 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext("2d");
 
-var row = 20;
-var column = 10;
+var row = 10;
+var column = 20;
 var mines = Math.floor(row * column / 10);
-var boxSize = 25;
+var boxSize = 40;
 
 var width = (row) * boxSize;
 var height = (column) * boxSize;
