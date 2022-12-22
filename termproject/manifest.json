@@ -1,6 +1,6 @@
 {
-    "name": "JavaScript samples",
-    "start_url": "/TermProject.html",
+    "name": "Mayın Tarlası",
+    "start_url": "termproject/TermProject.html",
     "display": "standalone",
     "background_color": "green",
     "icons": [
