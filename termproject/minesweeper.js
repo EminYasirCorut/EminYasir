@@ -99,7 +99,6 @@ var drawBombs = function(){
 }
 
 
-
 var gameover = false;
 var opened = row * column;
 var check = function(i,j){
