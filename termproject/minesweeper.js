@@ -110,6 +110,7 @@ var check = function(i,j){
         console.log('you lost');
         gameover = true;
         drawBombs();
+        window.alert("You Lost");
         return;
     }
     opened--;
@@ -117,6 +118,7 @@ var check = function(i,j){
         console.log("you win");
         gameover = true;
         drawB();
+        window.alert("You Win");
         return;
     }
     if (item != ' '){
