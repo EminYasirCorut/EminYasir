@@ -4,7 +4,7 @@ var ctx = canvas.getContext("2d");
 var row = 10;
 var column = 18;
 var mines = Math.floor(row * column / 10);
-var boxSize = 30;
+var boxSize = 35;
 
 var width = (row) * boxSize;
 var height = (column) * boxSize;
