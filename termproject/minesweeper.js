@@ -102,10 +102,8 @@ var drawBombs = function(){
 var gameover = false;
 var opened = row * column;
 var check = function(i,j){
-    console.log("=========================",i,j,"=============================");
     var ar = boxRow[i];
     var item = ar[j].item;
-    console.log(item);
     openBox(i,j,item);
     ar[j].state = 1;
     if(item == 'Q'){
@@ -126,16 +124,13 @@ var check = function(i,j){
     }
     for (r = 1; r >= -1; r--){
         for (c = 1; c >= -1; c--){
-            console.log("====", i,j, "=====",r,c);
             if (c + j >= 0 && c + j <= column - 1 && r + i >= 0 && r + i <= row - 1){
-                console.log(r,c, "====", i,j, "=====", r+i, c+j, boxRow[r + i][c + j]);
                 var arr = boxRow[r + i];
                 if (arr[c + j].state == 0){
                     // for some reason r and c are not same after calling check function
                     var t = r;
                     var y = c;
                     check (r + i, c + j);
-                    console.log("boom","====", i,j, "=====",r,c,t,y);
                     r = t;
                     c = y; 
                 }
