@@ -1,8 +1,8 @@
 navigator.serviceWorker.register('sw.js');
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext("2d");
-var row = 16;
-var column = 10;
+var row = 10;
+var column = 18;
 var mines = Math.floor(row * column / 10);
 var boxSize = 30;
 
