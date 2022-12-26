@@ -162,16 +162,18 @@ document.oncontextmenu = function(mouse){
         var i = Math.floor(mouseX/boxSize);
         var j = Math.floor(mouseY/boxSize);
         if (i < width && j < height){
-            if (boxRow[i][j].state == 0){
-                ctx.fillStyle = "#ffffff";
-                ctx.fillText('B', i * (boxSize) + boxSize / 2 - fontSize/3,j * (boxSize) + boxSize / 2 + fontSize/3);
-                boxRow[i][j].state = 2
-            }else if (boxRow[i][j].state == 2){
-                ctx.fillStyle = "#777777";
-                ctx.fillRect(i * (boxSize),j * (boxSize),boxSize,boxSize);
-                ctx.strokeStyle = "#333333";
-                ctx.strokeRect(i * (boxSize),j * (boxSize),boxSize,boxSize);
-                boxRow[i][j].state = 0
+            if (boxRow[i][j]) {
+                if (boxRow[i][j].state == 0){
+                    ctx.fillStyle = "#ffffff";
+                    ctx.fillText('B', i * (boxSize) + boxSize / 2 - fontSize/3,j * (boxSize) + boxSize / 2 + fontSize/3);
+                    boxRow[i][j].state = 2
+                }else if (boxRow[i][j].state == 2){
+                    ctx.fillStyle = "#777777";
+                    ctx.fillRect(i * (boxSize),j * (boxSize),boxSize,boxSize);
+                    ctx.strokeStyle = "#333333";
+                    ctx.strokeRect(i * (boxSize),j * (boxSize),boxSize,boxSize);
+                    boxRow[i][j].state = 0
+                }
             }
         }
         if(mouseX < canvas.width && mouseY < canvas.height){
